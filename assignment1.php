@@ -275,3 +275,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+    
+//9. Accept any string, display 3 radio buttons with font choice, when user select
+any font display the accepted string with that font on next page. You can also
+give font color.
+
+<html>
+<head>
+    <title>Font Selection</title>
+</head>
+<body>
+
+<form action="display.php" method="post">
+    Enter String:
+    <input type="text" name="str" required><br><br>
+
+    Select Font:<br>
+    <input type="radio" name="font" value="Arial" required> Arial<br>
+    <input type="radio" name="font" value="Courier New"> Courier New<br>
+    <input type="radio" name="font" value="Times New Roman"> Times New Roman<br><br>
+
+    Select Font Color:
+    <input type="color" name="color" value="#0000ff"><br><br>
+
+    <input type="submit" value="Display">
+</form>
+
+</body>
+</html>
