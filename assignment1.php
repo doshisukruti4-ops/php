@@ -1,8 +1,3 @@
-
-
- 
- 
-
 // 1. make table by using echo statement..
     <?php
     $name="sukruti";
@@ -13,7 +8,6 @@ echo "<td>city:</td>";
 echo "<td>collage:</td>";
 echo "<td>percentage:</td>";
 echo "</tr>";
-
 
 echo "<tr>";
 echo "<td>rajvi</td>";
@@ -36,8 +30,8 @@ echo "<td>87%</td>";
  echo "<td>99%</td>";
  echo "</tr>";
  echo "</table>";
-
 ?>
+
 //2.variable display by php and html
 
 <html>
@@ -57,7 +51,6 @@ pincode:<?php  echo $pincode; ?>
 </body>
 </html>
 
-
 echo "<table border=1>";
 echo "<tr>";
 echo "<td>name:</td>";
@@ -65,10 +58,8 @@ echo "<td>city:</td>";
 echo "<td>collage:</td>";
 echo "<td>percentage:</td>";
 echo "</tr>";
-
-
-
     ?>
+ 
 //3.display value an operation in table 
 
 <html>
