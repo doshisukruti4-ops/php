@@ -175,4 +175,43 @@ $c=122;
     echo "final bill=".$finalbill."<br>";
    
    ?>
+
  
+ //7.find maxium and minimum value from get or post method 
+
+<html>
+<head>
+    <title>Maximum and Minimum Number</title>
+</head>
+<body>
+
+<form method="post">
+    Enter First Number:
+    <input type="number" name="num1" required><br><br>
+
+    Enter Second Number:
+    <input type="number" name="num2" required><br><br>
+
+    Enter Third Number:
+    <input type="number" name="num3" required><br><br>
+
+    <input type="submit" value="Find Max & Min">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $num3 = $_POST['num3'];
+
+    $max = max($num1, $num2, $num3);
+    $min = min($num1, $num2, $num3);
+
+    echo "<h3>Results</h3>";
+    echo "Maximum Number = " . $max . "<br>";
+    echo "Minimum Number = " . $min;
+}
+?>
+
+</body>
+</html>
