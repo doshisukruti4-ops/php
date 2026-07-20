@@ -1,10 +1,10 @@
 
-<?php 
+
  
  
 
 // 1. make table by using echo statement..
-    
+    <?php
     $name="sukruti";
 echo "<table border=1>";
 echo "<tr>";
@@ -37,7 +37,7 @@ echo "<td>87%</td>";
  echo "</tr>";
  echo "</table>";
 
-
+?>
 //2.variable display by php and html
 
 <html>
