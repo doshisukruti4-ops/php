@@ -32,33 +32,39 @@ echo "<td>87%</td>";
  echo "</table>";
 ?>
 
-//2.variable display by php and html
+
+
+//2.Take for variable in PHP(Name, Contact, Address and Pincode)
+Display two variables in php itself and display two variables in html part
+using inline php.
 
 <html>
+<head>
+    <title>PHP Variables Example</title>
+</head>
 <body>
 
-    <?php
-$name="Dipak";
-$contact=9744324311;
-$address="university road";
-$pincode=360005;
-echo "name:" .$name. "<br>";
-echo "contact:". $contact. "<br>";
+<?php
+// PHP Variables
+$name = "Dipak";
+$contact = "9825298252";
+$address = "University Road";
+$pincode = "360007";
+
+// Display two variables using PHP
+echo "<h3>Using PHP</h3>";
+echo "Name: " . $name . "<br>";
+echo "Contact: " . $contact . "<br><br>";
 ?>
-address: <?php  echo $address; ?> <br>
-pincode:<?php  echo $pincode; ?>
+
+<h3>Using Inline PHP</h3>
+Address: <?php echo $address; ?> <br>
+Pincode: <?php echo $pincode; ?>
 
 </body>
 </html>
 
-echo "<table border=1>";
-echo "<tr>";
-echo "<td>name:</td>";
-echo "<td>city:</td>";
-echo "<td>collage:</td>";
-echo "<td>percentage:</td>";
-echo "</tr>";
-    ?>
+ 
  
 //3.display value an operation in table 
 
@@ -112,61 +118,55 @@ echo "</tr>";
     </html>
 
 // 4.check given no. is even or odd..
-
+<?php
     $num=56;
     if($num%2==0)
        echo "number is even";
     else
        echo   "number is odd";
    
-    
-       5. find maximum value among given value..
-   $a=755;
-   $b=899;
-   $c=122;
-   if($a>$b && $a>$c)
-       echo "A has maximum value..";
-   elseif($b>$a && $b>$c)
-       echo "B has maximum value..";
-   else
-       echo "C has maximum value..";
+    ?>
        
+
 // 5. find maximum value among given value..
- 
-$a=755;
-$b=899;
-$c=122;
-    if($a>$b && $a>$c)
-        echo "A has maximum value..";
-    elseif($b>$a && $b>$c)
-        echo "B has maximum value..";
-    else
-        echo "C has maximum value..";
+<?php
+$a = 25;
+$b = 40;
+$c = 15;
 
-//6.total bill findin by if ..else statement
-    <?php
-    $purchase = 2500;   // Purchase Amount
+if ($a >= $b && $a >= $c) {
+    echo "Maximum number is: " . $a;
+} elseif ($b >= $a && $b >= $c) {
+    echo "Maximum number is: " . $b;
+} else {
+    echo "Maximum number is: " . $c;
+}
+?>
+ //6. Display bill amount with discount to customers. If purchase amount greater
+than 500 then he/she will get discount of 5%, if purchase amount greater
+than 1000 then he/she will get discount of 10% and if purchase is greater
+than 2000 the he/she will get discount of 15%.
+<?php
+$amount = 2500;   // Purchase amount
 
-    if ($purchase > 2000) {
-        $discount = $purchase * 0.15;
-    }
-    else if ($purchase > 1000) {
-        $discount = $purchase * 0.10;
-    }
-    else if ($purchase > 500) {
-        $discount = $purchase * 0.05;
-    }
-    else {
-        $discount = 0;
-    }
-    $finalbill=$purchase-$discount;
-    echo "<br>total bill<br>";
-    echo "total purchase=" .$purchase."<br>";
-    echo "total discount=".$discount."<br>";
-    echo "final bill=".$finalbill."<br>";
-   
-   ?>
+if ($amount > 2000) {
+    $discount = $amount * 0.15;
+} elseif ($amount > 1000) {
+    $discount = $amount * 0.10;
+} elseif ($amount > 500) {
+    $discount = $amount * 0.05;
+} else {
+    $discount = 0;
+}
 
+$finalBill = $amount - $discount;
+
+echo "Purchase Amount: ₹" . $amount . "<br>";
+echo "Discount: ₹" . $discount . "<br>";
+echo "Final Bill Amount: ₹" . $finalBill;
+?>
+    
+       
  
  //7.find maxium and minimum value from get or post method 
 
